@@ -37,20 +37,20 @@
 
 **要完成的工作**:
 
-- [ ] T001 创建 Cargo workspace 根配置文件 `Cargo.toml`
-- [ ] T002 [P] 创建 `rdb-domain` crate 目录结构和 `rdb-domain/Cargo.toml`
-- [ ] T003 [P] 创建 `rdb-storage` crate 目录结构和 `rdb-storage/Cargo.toml`
-- [ ] T004 [P] 创建 `rdb-infrastructure` crate 目录结构和 `rdb-infrastructure/Cargo.toml`
-- [ ] T005 [P] 创建 `rdb-sql` crate 目录结构和 `rdb-sql/Cargo.toml`
-- [ ] T006 [P] 创建 `rdb-application` crate 目录结构和 `rdb-application/Cargo.toml`
-- [ ] T007 [P] 创建 `rdb-interface` crate 目录结构和 `rdb-interface/Cargo.toml`
-- [ ] T008 配置 GitHub Actions CI 文件 `.github/workflows/ci.yml`
-- [ ] T009 [P] 创建项目 README 文件 `README.md`
-- [ ] T010 [P] 创建 LICENSE 文件 `LICENSE`
-- [ ] T011 [P] 配置 `.gitignore` 文件
-- [ ] T012 [P] 配置 `rustfmt.toml` 格式化规则
-- [ ] T013 [P] 配置 `clippy.toml` Lint 规则
-- [ ] T014 验证编译：`cargo build --all` 成功
+- [x] T001 创建 Cargo workspace 根配置文件 `Cargo.toml`
+- [x] T002 [P] 创建 `rdb-domain` crate 目录结构和 `rdb-domain/Cargo.toml`
+- [x] T003 [P] 创建 `rdb-storage` crate 目录结构和 `rdb-storage/Cargo.toml`
+- [x] T004 [P] 创建 `rdb-infrastructure` crate 目录结构和 `rdb-infrastructure/Cargo.toml`
+- [x] T005 [P] 创建 `rdb-sql` crate 目录结构和 `rdb-sql/Cargo.toml`
+- [x] T006 [P] 创建 `rdb-application` crate 目录结构和 `rdb-application/Cargo.toml`
+- [x] T007 [P] 创建 `rdb-interface` crate 目录结构和 `rdb-interface/Cargo.toml`
+- [x] T008 配置 GitHub Actions CI 文件 `.github/workflows/ci.yml`
+- [x] T009 [P] 创建项目 README 文件 `README.md`
+- [x] T010 [P] 创建 LICENSE 文件 `LICENSE`
+- [x] T011 [P] 配置 `.gitignore` 文件
+- [x] T012 [P] 配置 `rustfmt.toml` 格式化规则
+- [x] T013 [P] 配置 `clippy.toml` Lint 规则
+- [x] T014 验证编译：`cargo build --all` 成功
 
 **备注**: 
 - Week 1 主要是搭架子，确保 6 个 crate 能互相依赖且编译通过
