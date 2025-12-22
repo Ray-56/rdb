@@ -15,3 +15,38 @@ version = "0.1.0"
 edition = "2021"
 
 [workspace.dependencies]
+thiserror = "2.0"
+serde = { version = "1", features = ["derive"] }
+proptest = "1"
+bincode = "1"
+
+# Clippy lint 级别配置（Rust 1.74+ 推荐方式）
+# 注意：workspace 根目录不支持 [lints]，需要在各个子 crate 的 Cargo.toml 中配置
+# 或者使用 workspace.lints（如果支持）
+[workspace.lints.clippy]
+# 明确 deny 真正危险的（保留底线）
+unwrap_used = "deny"
+expect_used = "deny"
+panic = "deny"
+todo = "deny"
+unimplemented = "deny"
+dbg_macro = "deny"
+
+# 一些合理放宽（降级为 warn）
+cognitive_complexity = "warn" # 允许复杂函数，数据库代码难免
+too_many_arguments = "warn"   # B+Tree 函数参数多很正常
+type_complexity = "warn"
+large_enum_variant = "warn"   # Value 枚举很大，正常
+
+# 允许的 lint（放宽列表）
+multiple_crate_versions = "allow"      # 依赖版本冲突管不了
+cargo_common_metadata = "allow"
+module_name_repetitions = "allow"      # 允许 rdb_domain::domain::xxx
+redundant_else = "allow"
+match_same_arms = "allow"
+option_if_let_else = "allow"
+manual_map = "allow"
+derive_partial_eq_without_eq = "allow" # 我们经常自己写 Eq
+missing_errors_doc = "allow"
+missing_panics_doc = "allow"
+must_use_candidate = "allow"           # 数据库函数很多都不用 must_use

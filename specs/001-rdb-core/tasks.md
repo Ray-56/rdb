@@ -75,17 +75,17 @@
 
 **要完成的工作**:
 
-- [ ] T015 [P] 实现 ID 类型（newtype 模式）在 `rdb-domain/src/ids.rs`: `TableId`, `ColumnId`, `RowId`, `PageId`, `IndexId`, `TransactionId`, `LockId`
-- [ ] T016 [P] 实现 `DataType` 枚举在 `rdb-domain/src/data_type.rs`: `Integer`, `Real`, `Text`, `Blob`
-- [ ] T017 实现 `Value<'v>` 枚举在 `rdb-domain/src/value.rs`: `Null`, `Integer(i64)`, `Real(f64)`, `Text(Cow<'v, str>)`, `Blob(Cow<'v, [u8]>)`
-- [ ] T018 实现 `Column` 结构在 `rdb-domain/src/column.rs`: 列定义（name, data_type, constraints）
-- [ ] T019 实现 `ColumnConstraints` 结构在 `rdb-domain/src/column.rs`: `not_null`, `unique`, `primary_key`, `autoincrement`
-- [ ] T020 实现 `Table` 结构在 `rdb-domain/src/table.rs`: 表定义（id, name, columns, primary_key, root_page）
-- [ ] T021 实现 `Row` 结构在 `rdb-domain/src/row.rs`: 行数据（row_id, values）
-- [ ] T022 实现 `Database` 聚合根在 `rdb-domain/src/database.rs`: 数据库实例（path, tables, indexes, schema_version）
-- [ ] T023 [P] 实现错误类型在 `rdb-domain/src/error.rs`: `DomainError` 枚举
-- [ ] T024 [P] 添加单元测试在 `rdb-domain/tests/domain_tests.rs`: 所有类型的构造和验证测试
-- [ ] T025 添加 proptest 在 `rdb-domain/tests/proptest_value.rs`: `Value` 序列化/反序列化往返测试
+- [x] T015 [P] 实现 ID 类型（newtype 模式）在 `rdb-domain/src/ids.rs`: `TableId`, `ColumnId`, `RowId`, `PageId`, `IndexId`, `TransactionId`, `LockId`
+- [x] T016 [P] 实现 `DataType` 枚举在 `rdb-domain/src/data_type.rs`: `Integer`, `Real`, `Text`, `Blob`
+- [x] T017 实现 `Value<'v>` 枚举在 `rdb-domain/src/value.rs`: `Null`, `Integer(i64)`, `Real(f64)`, `Text(Cow<'v, str>)`, `Blob(Cow<'v, [u8]>)`
+- [x] T018 实现 `Column` 结构在 `rdb-domain/src/column.rs`: 列定义（name, data_type, constraints）
+- [x] T019 实现 `ColumnConstraints` 结构在 `rdb-domain/src/column.rs`: `not_null`, `unique`, `primary_key`, `autoincrement`
+- [x] T020 实现 `Table` 结构在 `rdb-domain/src/table.rs`: 表定义（id, name, columns, primary_key, root_page）
+- [x] T021 实现 `Row` 结构在 `rdb-domain/src/row.rs`: 行数据（row_id, values）
+- [x] T022 实现 `Database` 聚合根在 `rdb-domain/src/database.rs`: 数据库实例（path, tables, indexes, schema_version）
+- [x] T023 [P] 实现错误类型在 `rdb-domain/src/error.rs`: `DomainError` 枚举
+- [x] T024 [P] 添加单元测试在 `rdb-domain/tests/domain_tests.rs`: 所有类型的构造和验证测试
+- [x] T025 添加 proptest 在 `rdb-domain/tests/proptest_value.rs`: `Value` 序列化/反序列化往返测试
 
 **备注**: 
 - 所有类型都要标注生命周期和 Send/Sync 要求
