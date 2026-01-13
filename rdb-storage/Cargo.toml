@@ -4,5 +4,9 @@ version.workspace = true
 edition.workspace = true
 
 [dependencies]
+rdb-domain = { path = "../rdb-domain" }
+rdb-infrastructure = { path = "../rdb-infrastructure" }
+thiserror = { workspace = true }
 
 [dev-dependencies]
+proptest = { workspace = true }

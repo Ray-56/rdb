@@ -230,6 +230,12 @@ version = "0.1.0"
 [[package]]
 name = "rdb-storage"
 version = "0.1.0"
+dependencies = [
+ "proptest",
+ "rdb-domain",
+ "rdb-infrastructure",
+ "thiserror",
+]
 
 [[package]]
 name = "regex-syntax"

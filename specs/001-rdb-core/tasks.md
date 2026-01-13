@@ -107,17 +107,17 @@
 
 **要完成的工作**:
 
-- [ ] T026 实现 `PageType` 枚举在 `rdb-storage/src/page.rs`: `Internal`, `Leaf`, `Overflow`, `Freelist`
-- [ ] T027 实现 `PageHeader` 结构在 `rdb-storage/src/page.rs`: 32 字节页头定义
-- [ ] T028 实现 `Page<'page>` 结构在 `rdb-storage/src/page.rs`: 4KB 对齐的数据页（`#[repr(C, align(4096))]`）
-- [ ] T029 实现 `Page` 的基础方法在 `rdb-storage/src/page.rs`: `new()`, `from_bytes()`, `page_id()`, `page_type()`, `mark_dirty()`, `data()`, `data_mut()`
-- [ ] T030 实现页头解析和写入方法在 `rdb-storage/src/page.rs`: `parse_header()`, `write_header()`
-- [ ] T031 实现 `Pager<'db>` 结构在 `rdb-storage/src/pager.rs`: 页管理器（file, page_size, page_count, buffer_pool）
-- [ ] T032 实现 `Pager` 的基础方法在 `rdb-storage/src/pager.rs`: `new()`, `get_page()`, `get_page_mut()`, `allocate_page()`, `flush_page()`, `flush_all()`
-- [ ] T033 实现文件 IO 封装在 `rdb-infrastructure/src/file_io.rs`: 文件读写辅助函数
-- [ ] T034 [P] 添加单元测试在 `rdb-storage/tests/page_tests.rs`: 页创建、读写、header 解析测试
-- [ ] T035 [P] 添加单元测试在 `rdb-storage/tests/pager_tests.rs`: 页管理、分配、刷新测试
-- [ ] T036 添加 proptest 在 `rdb-storage/tests/proptest_page.rs`: 页读写一致性测试
+- [x] T026 实现 `PageType` 枚举在 `rdb-storage/src/page.rs`: `Internal`, `Leaf`, `Overflow`, `Freelist`
+- [x] T027 实现 `PageHeader` 结构在 `rdb-storage/src/page.rs`: 32 字节页头定义
+- [x] T028 实现 `Page<'page>` 结构在 `rdb-storage/src/page.rs`: 4KB 对齐的数据页（`#[repr(C, align(4096))]`）
+- [x] T029 实现 `Page` 的基础方法在 `rdb-storage/src/page.rs`: `new()`, `from_bytes()`, `page_id()`, `page_type()`, `mark_dirty()`, `data()`, `data_mut()`
+- [x] T030 实现页头解析和写入方法在 `rdb-storage/src/page.rs`: `parse_header()`, `write_header()`
+- [x] T031 实现 `Pager<'db>` 结构在 `rdb-storage/src/pager.rs`: 页管理器（file, page_size, page_count, buffer_pool）
+- [x] T032 实现 `Pager` 的基础方法在 `rdb-storage/src/pager.rs`: `new()`, `get_page()`, `get_page_mut()`, `allocate_page()`, `flush_page()`, `flush_all()`
+- [x] T033 实现文件 IO 封装在 `rdb-infrastructure/src/file_io.rs`: 文件读写辅助函数
+- [x] T034 [P] 添加单元测试在 `rdb-storage/tests/page_tests.rs`: 页创建、读写、header 解析测试
+- [x] T035 [P] 添加单元测试在 `rdb-storage/tests/pager_tests.rs`: 页管理、分配、刷新测试
+- [x] T036 添加 proptest 在 `rdb-storage/tests/proptest_page.rs`: 页读写一致性测试
 
 **备注**: 
 - `Page` 必须 4KB 对齐，使用 `#[repr(C, align(4096))]`

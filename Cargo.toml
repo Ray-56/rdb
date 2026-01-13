@@ -17,7 +17,7 @@ edition = "2021"
 [workspace.dependencies]
 thiserror = "2.0"
 serde = { version = "1", features = ["derive"] }
-proptest = "1"
+proptest = { version = "1" }
 bincode = "1"
 
 # Clippy lint 级别配置（Rust 1.74+ 推荐方式）
